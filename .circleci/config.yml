@@ -12,7 +12,7 @@ jobs:
             command: | 
                 # install DumpsterDiver here
                 echo "installing pip and running DumpsterDiver"
-                sudo apt -get install pip
+                sudo apt-get install pip
                 git clone https://github.com/securing/DumpsterDiver.git
                 cd DumpsterDiver
                 pip install -r requirements.txt
