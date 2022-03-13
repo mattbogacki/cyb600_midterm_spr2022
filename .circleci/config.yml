@@ -55,9 +55,7 @@ jobs:
               docker build --no-cache -t $DOCKER_USER/$CIRCLE_PROJECT_REPONAME:$(cat tempvers.txt) docker
               docker push $DOCKER_USER/$CIRCLE_PROJECT_REPONAME:$(cat tempvers.txt)
           name: "Build application Docker image"
-    working_directory: ~/spring-rest-helloworld
-    
-       -
+      -
         run: 
           command: | 
               sudo apt-get install wget apt-transport-https gnupg lsb-release
@@ -67,3 +65,4 @@ jobs:
               sudo apt-get install trivy
               trivy image $DOCKER_USER/$CIRCLE_PROJECT_REPONAME:$(cat tempvers.txt)
           name: "trivy"
+    working_directory: ~/spring-rest-helloworld
