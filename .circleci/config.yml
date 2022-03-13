@@ -57,7 +57,7 @@ jobs:
           name: "Build application Docker image"
     working_directory: ~/spring-rest-helloworld
     
-      -
+       -
         run: 
           command: | 
               sudo apt-get install wget apt-transport-https gnupg lsb-release
